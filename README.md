@@ -40,5 +40,5 @@ Você pode checar o DER do desafio em:
 Você pode checar o protótipo do design pelo figma:
 
 ```
- https://www.figma.com/proto/heG7rAumh2EShyId880DHq/Prot%C3%B3tipo-LuizaLabs?node-id=2%3A68&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A67
+https://www.figma.com/file/heG7rAumh2EShyId880DHq/Prot%C3%B3tipo-LuizaLabs?node-id=0%3A1&t=t8TOXfvC6OhUreXG-1
  ```
