@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6X4cVQJdjFcmX0tgUNjRQqPkO84oG1brS/GPN/AisdE=",
+  "Hash": "4/mRUp8NEW5rn1av4o9M0XIb8JN4OcH7fDcjhoeqhvA=",
   "Source": "LuizaLabsDesafio",
   "BasePath": "_content/LuizaLabsDesafio",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\beatr\\source\\repos\\LuizaLabsDesafio\\LuizaLabsDesafio\\wwwroot\\js\\login.js",
+      "SourceId": "LuizaLabsDesafio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\beatr\\source\\repos\\LuizaLabsDesafio\\LuizaLabsDesafio\\wwwroot\\",
+      "BasePath": "_content/LuizaLabsDesafio",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
       "Identity": "C:\\Users\\beatr\\source\\repos\\LuizaLabsDesafio\\LuizaLabsDesafio\\wwwroot\\js\\site.js",

@@ -4,8 +4,13 @@
 
 
 body {
-  
+  overflow:hidden;
 }
+
+.bx {
+    font-weight: 700;
+}
+
 
 .container {
     width: 100%;
@@ -98,7 +103,20 @@ body {
     right: 0%;
 }
 
-/*.gradient:hover {
-    transition: 1s;
-    ;
-}*/
+.logout {
+    position:relative;
+    left: 87%;
+    color: #0E87FE;
+    font-size: 30px;
+    margin-top: 15%;
+    cursor:pointer;
+}
+
+    .logout i {
+        position: relative;
+        top: 3px;
+        left: 26px;
+        font-size: 30px;
+        height: 30px;
+        width: 50px;
+    }

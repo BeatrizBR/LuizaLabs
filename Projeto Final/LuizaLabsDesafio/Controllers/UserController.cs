@@ -1,5 +1,6 @@
 ﻿using DesafioLuizaLabs.Models;
 using LuizaLabsDesafio.Repositories.Interface;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -41,6 +42,7 @@ namespace LuizaLabsDesafio.Controllers
             {
                 existentUser = _userRepository.Login(user);
                 Response.Redirect("/login/login");
+				ReferenceEquals(existentUser, user);
                 Console.WriteLine(user);
                 return Ok();
             }
