@@ -3,6 +3,9 @@ using LuizaLabsDesafio.Repositories.Interface;
 using LuizaLabsDesafio.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.Swagger;
+using Microsoft.OpenApi.Models;
 
 namespace LuizaLabsDesafio
 {
@@ -11,7 +14,13 @@ namespace LuizaLabsDesafio
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+			builder.Services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("Login", new OpenApiInfo { Title = "UserController", Version = "3.0.0" });
+			});
+
+			var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddEntityFrameworkSqlServer()
                                 .AddDbContext<UserSystemContext>(
                                                 options => options.UseSqlServer(
@@ -25,15 +34,25 @@ namespace LuizaLabsDesafio
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+
+            //Ativa o Swagger
+            app.UseSwagger();
+			// Ativa o Swagger UI
+			app.UseSwaggerUI(opt =>
+				{
+					opt.SwaggerEndpoint("/api/user", "Login");
+				});
+
+
+			app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

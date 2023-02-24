@@ -1,4 +1,5 @@
 @import url('https://dl.dafont.com/dl/?f=cocogoose_classic;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
 * {
     font-family: COCOGOOSE,sans-serif;
@@ -79,13 +80,13 @@ header {
     /* outline: none;*/
 }
 
-i {
-    position: relative;
-    top: -37px;
-    left: 31px;
-    color: #CCD1FF;
-    font-size:24px;
-}
+    .input-field i {
+        position: relative;
+        top: -37px;
+        left: 31px;
+        color: #CCD1FF;
+        font-size: 24px;
+    }
 
 ::-webkit-input-placeholder {
     color: #CCD1FF;
@@ -149,3 +150,7 @@ footer {
     padding-top: 0.5%;
 }
 
+    footer i {
+        font-family: 'Baloo 2', cursive;
+        font-size: 11px;
+    }
