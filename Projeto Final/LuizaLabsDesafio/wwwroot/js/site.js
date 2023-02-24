@@ -20,7 +20,6 @@
         data: stringifiedUser,
 
         success: function (response) {
-            console.log("WEEEEEEEEEEEE ARE THE CHAMPIONS, MY FRIEND");
             if (rememberMe.checked) {
                 window.sessionStorage.setItem("password", password);
             }
