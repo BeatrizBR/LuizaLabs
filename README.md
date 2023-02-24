@@ -4,8 +4,6 @@
 #### Um breve projeto de aplicação de login, contendo db,back e front
 
 
-![Desafio Luizalabs](https://user-images.githubusercontent.com/61192741/221093073-a6b5858e-42b3-436a-b979-9fcbc56264b1.png)
-
 #### Tecnologias:
 
 - SQL Server
