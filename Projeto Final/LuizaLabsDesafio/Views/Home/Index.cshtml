@@ -1,0 +1,111 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>LuizaLabs | Login</title>
+
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+
+            <div class="top">
+                <span class="logo">                  
+                    <img src="https://logodownload.org/wp-content/uploads/2014/06/magalu-logo-1.png" />
+                </span>
+                <header>Login</header>
+            </div>
+
+            <div class="input-field">
+                <input type="text" class="input" placeholder="Username" id="username" >
+                <i class='bx bx-user-circle'></i>
+            </div>
+
+            <div class="input-field">
+                <input type="Password" class="input" placeholder="Password" id="_password">
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <div class="input-remember">
+                <input class="form-check-input" type="radio">
+                <label for="radio"> Lembre de mim</label>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" class="submit" value="Login" id="btnLogin" onclick="clickme()" >
+
+            </div>
+            
+            @*--------- incorrect user label --------------*@
+            <div class="bottom-texts">
+                <label hidden id="incorrect-user">Senha e/ou usuário incorreto(s)!</label>
+            </div>
+
+            <div class="bottom-texts">
+                Esqueci minha <label><a href="#">senha</a></label>
+            </div>
+
+            <div class="bottom-texts">
+                Ainda não é cliente? <label><a href="#">Cadastre-se!</a></label>
+            </div>
+            
+        </div>
+
+    </div>
+            
+    <footer class="footer">
+        <label class="text-mg-cnpj">
+            Magazine Luiza S/A - CNPJ: 47.960.950/1088-36
+
+        <p>
+
+            ® Magazine Luiza – Todos os direitos reservados.
+        </label>
+    </footer>
+
+    <script type="text/javascript">
+
+        function clickme(){
+            console.log("funcionando...")
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("_password").value;
+            var incorrect = document.getElementById("incorrect-user");
+
+
+            var user = new Object();
+            user.username = username;
+            user._password = password
+
+            //convert object to json string
+            var stringifiedUser = JSON.stringify(user);
+            var request = $.ajax({
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    url: "/api/user/login",
+                                    type: "POST",
+                                    data: stringifiedUser,
+                                    success: function(response) {
+                                        console.log("WEEEEEEEEEEEE ARE THE CHAMPIONS, MY FRIEND");
+                                        sessionStorage.setItem("key",password);
+                                        window.location.href = "login/login";
+                                    },
+                                     error: function errorMessage (request, status, error) {
+                                        incorrect.removeAttribute("hidden");
+                                    } 
+                                });
+
+        
+             }
+        
+    </script>
+
+</body>
+</html>
+

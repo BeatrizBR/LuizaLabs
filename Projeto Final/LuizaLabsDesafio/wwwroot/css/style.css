@@ -1,0 +1,151 @@
+@import url('https://dl.dafont.com/dl/?f=cocogoose_classic;600;800&display=swap');
+
+* {
+    font-family: COCOGOOSE,sans-serif;
+}
+
+.bx{
+    font-weight:700;
+}
+
+body {
+    background-image: url("https://newtrade.com.br/wp-content/uploads/2021/12/magazine-luiza-13-dez-2021-750x430.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 0 1000px rgba(0,115,255,0.7);
+    overflow:hidden;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+    .box .container {
+        background-color: #ECECFF;
+        width:100%;
+        height:600px;
+        border-radius: 20px;
+    }
+
+.container {
+    width: 24%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+
+
+
+img{
+    width:60%;
+    height:35%;
+    padding:0px;
+    margin: 15% 0% 5% 20%;
+}
+
+header {
+    color: #0E87FE;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0% 0% 2% 0%;
+    margin-bottom: 8%;
+}
+
+.input-field{
+    height:10%;
+    margin: 2% 0%;
+}
+
+.input-field .input {
+    height: 50px;
+    width: 90%;
+    border:solid;
+    border-color: #CCD1FF;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 10%;
+    background: #E3E6FF;
+    margin: 0% 5%;
+    /* outline: none;*/
+}
+
+i {
+    position: relative;
+    top: -37px;
+    left: 31px;
+    color: #CCD1FF;
+    font-size:24px;
+}
+
+::-webkit-input-placeholder {
+    color: #CCD1FF;
+}
+
+.submit {
+    border-color: rgba(60,105,222,0.16);
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 26px;
+    height: 60px;
+    outline: none;
+    width: 50%;
+    color: #ECECFF;
+    background: #70AAF3;
+    cursor: pointer;
+    transition: .3s;
+    margin: 2% 25%;
+}
+
+    .submit:hover {
+        box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    }
+
+.input-remember {
+    color: #70AAF3;
+    margin: 1% 6%;
+}
+
+#incorrect-user {
+    color: #FF8C8C;
+    font-size:12px;
+}
+
+
+
+.bottom-texts {
+    color: #70AAF3;
+    text-align:center;
+    margin-top: 2%;
+}
+
+.bottom-texts a {
+        color: #8F4FE1;
+        text-decoration: none;
+}
+
+footer {
+    width:100%;
+    min-height:65px;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    font-size:10px;
+    background-color: rgba(108,149,255,0.4);
+    color:white;
+    text-align:center;
+    justify-content:center; 
+    margin-top: 15%;
+    padding-top: 0.5%;
+}
+
